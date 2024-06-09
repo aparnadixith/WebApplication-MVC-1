@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "CheckTemperature";
+}
+
+
+<h2>Check Temperature</h2>
+
+<form method="post" action="/FeverCheck">
+    <label for="temperature">Enter your temperature:</label>
+    <input type="number" step="0.1" id="temperature" name="temperature" required />
+
+    <div>
+        <input type="radio" id="celsius" name="unit" value="Celsius" checked />
+        <label for="celsius">Celsius</label>
+        <input type="radio" id="fahrenheit" name="unit" value="Fahrenheit" />
+        <label for="fahrenheit">Fahrenheit</label>
+    </div>
+
+    <input type="submit" value="Check" />
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
