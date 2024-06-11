@@ -1,4 +1,5 @@
-﻿@{
+﻿   
+@{
     ViewBag.Title = "Guessing Game";
 }
 
@@ -7,10 +8,11 @@
 <p>@ViewBag.Message</p>
 
 <form asp-action="/GuessingGame" method="post">
-    <div class ="form-group">
-     <label for="guess">Enter your guess:</label>
-    <input type="number" id="guess" name="guess" /></div>
-    <button type="submit" class="Submit Guess" >Submit</button>
+    <div class="form-group">
+        <label for="guess">Enter your guess:</label>
+        <input type="number" id="guess" name="guess" />
+    </div>
+    <button type="submit" class="Submit Guess">Submit</button>
 </form>
 
 @if (ViewBag.GuessCount != null)

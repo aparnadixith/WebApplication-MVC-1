@@ -25,10 +25,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseSession();
+
 app.MapControllerRoute(
        name: "feverCheck",
        pattern: "FeverCheck",
-       defaults: new { controller = "Doctor", action = "FeverCheck" });
+       defaults: new { controller = "Doctor", action = "CheckTemperature" });
 
 app.MapControllerRoute(
      name: "guessingGame",
